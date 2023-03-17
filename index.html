@@ -11,13 +11,14 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat quo corrupti tenetur, iusto quae ratione nesciunt excepturi omnis unde assumenda suscipit ut corporis voluptas nemo? Pariatur, voluptatem eum. Amet.</p>
     <script>
         var WebApp = window.Telegram.WebApp;
-        WebApp.ready();
+        
         WebApp.showAlert('Добро пожаловать.');
         var MainButton = WebApp.MainButton(isVisible=true,text='BEST BTN');
         var BackButton = WebApp.BackButton;
 
         MainButton.show();
         BackButton.show();
+        WebApp.ready();
         MainButton.onClick(function() {
   WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
 });
