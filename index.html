@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat quo corrupti tenetur, iusto quae ratione nesciunt excepturi omnis unde assumenda suscipit ut corporis voluptas nemo? Pariatur, voluptatem eum. Amet.</p>
     <script>
         var WebApp = window.Telegram.WebApp;
+
         WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
         var MainButton = WebApp.MainButton;
         var BackButton = WebApp.BackButton;
@@ -19,19 +20,19 @@
         BackButton.show();
         MainButton.onClick(function() {
   WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
-    });
-    WebApp.onEvent('mainButtonClicked', function() {
-      /* also */
-    });
+});
+WebApp.onEvent('mainButtonClicked', function() {
+  /* also */
+});
 
-    BackButton.onClick(function() {
-      WebApp.showAlert("Нет пути назад!");
-
-      BackButton.hide();
-    });
-    WebApp.onEvent('backButtonClicked', function() {
-      /* also */
-    });
+BackButton.onClick(function() {
+  WebApp.showAlert("Нет пути назад!");
+  
+  BackButton.hide();
+});
+WebApp.onEvent('backButtonClicked', function() {
+  /* also */
+});
 
     </script>
 </body>
