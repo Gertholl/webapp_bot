@@ -13,7 +13,7 @@
         var WebApp = window.Telegram.WebApp;
         WebApp.ready();
         WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
-        var MainButton = WebApp.MainButton;
+        var MainButton = WebApp.MainButton(isVisible=true,text='BEST BTN');
         var BackButton = WebApp.BackButton;
 
         MainButton.show();
